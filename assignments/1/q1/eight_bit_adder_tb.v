@@ -1,12 +1,12 @@
-`include "8_bit_adder.v"
-module stimulus (
+`include "eight_bit_adder.v"
+module eight_bit_adder_tb (
 );
     reg[7:0] a,b,result;
     reg cin;
     wire [7:0] sum;
     
     wire cout;
-    adder add1(sum,cout,a,b,cin);
+    eight_bit_adder add1(sum,cout,a,b,cin);
     initial begin
         a=15;b=10;cin=1;
         #5;
@@ -42,7 +42,7 @@ module stimulus (
     end
     initial begin
         $dumpfile("result.vcd");
-        $dumpvars(0,stimulus);
+        $dumpvars(0,eight_bit_adder_tb);
     end
     initial begin
         $monitor("TIME: %d, a:%d, b:%d, cin:%d, sum:%d, cout:%d",$time,a,b,cin,sum,cout);

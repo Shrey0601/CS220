@@ -1,5 +1,5 @@
 // Define a l-bit full adder 
-module bitadd(sum, cout, a, b, cin) ; 
+module one_bit_adder(sum, cout, a, b, cin) ; 
     // I/O port declarations 
     output sum, cout; 
     input a, b, cin; 
