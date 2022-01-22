@@ -1,5 +1,5 @@
 `timescale 1ns /1ns
-`include "decoder_three_eight.v"
+`include "A1Q3_decoder_three_eight.v"
 
 module decoder_tb ;
    reg in0, in1, in2, en;

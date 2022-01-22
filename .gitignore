@@ -353,3 +353,4 @@
 !*.v
 !*.txt
 !.gitignore
+!.md

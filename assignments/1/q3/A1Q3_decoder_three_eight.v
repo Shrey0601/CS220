@@ -1,5 +1,5 @@
 // Including the 2-4 decoder module containing file
-`include "decoder_two_four.v"
+`include "A1Q3_decoder_two_four.v"
 
 // Define a 3-8 decoder
 module decoder_three_eight (
