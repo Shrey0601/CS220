@@ -1,4 +1,4 @@
-`include "eight_bit_comparator.v"
+`include "A1Q2_eight_bit_comparator.v"
 module eight_bit_comparator_tb ;
     reg [7:0] a,b;
     wire agb,aeb,alb;

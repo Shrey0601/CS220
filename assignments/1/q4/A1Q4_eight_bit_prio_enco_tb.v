@@ -16,13 +16,13 @@ module eight_bit_prio_enco_tb;
     #5;
     d_in=8'b00010010;
     #5;
-    d_in=8'b00001001;
+    d_in=8'b01001011;
     #5;
-    d_in=8'b00000100;
+    d_in=8'b01000100;
     #5;
-    d_in=8'b00000011;
+    d_in=8'b00000010;
     #5;
-    d_in=8'b00000001;
+    d_in=8'b01100001;
     #5;
     $finish;
     end // initial begin

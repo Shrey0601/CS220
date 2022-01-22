@@ -1,4 +1,4 @@
-`include "one_bit_comparator.v"
+`include "A1Q2_one_bit_comparator.v"
 module eight_bit_comparator (
     agb,aeb,alb,a,b
 );
