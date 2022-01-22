@@ -1,3 +1,4 @@
+// Define a 2-4 decoder
 module decoder_two_four (
     input in0,
     input in1,
@@ -7,6 +8,8 @@ module decoder_two_four (
     output d2,
     output d3
 );
+    
+    // Assigning the four outputs of the decoder given the two inputs and the enable signal
 
    assign d0 = en & (~in0) & (~in1) ;
    assign d1 = en & in0 & (~in1) ;
