@@ -20,7 +20,7 @@ module eight_bit_prio_enco_tb;
     #5;
     d_in=8'b01000100;
     #5;
-    d_in=8'b00000010;
+    d_in=8'b00000011;
     #5;
     d_in=8'b01100001;
     #5;
