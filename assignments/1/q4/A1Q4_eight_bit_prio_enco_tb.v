@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 `include "A1Q4_eight_bit_prio_enco.v"
 module eight_bit_prio_enco_tb;
    reg [7:0] d_in;
@@ -27,6 +26,11 @@ module eight_bit_prio_enco_tb;
     $finish;
     end // initial begin
     
+    initial begin
+      $dumpfile("result.vcd");
+      $dumpvars(0,eight_bit_prio_enco_tb);
+    end
+
     initial begin
         $monitor("TIME:%d , d_in:%b , d_out:%b",$time,d_in,d_out);
     end

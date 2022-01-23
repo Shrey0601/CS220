@@ -1,9 +1,9 @@
 module eight_bit_prio_enco(d_out, d_in);
-
+   
    output [2:0] d_out;
-   input [7:0] d_in ;
+   input [7:0] d_in;
 
-    assign d_out = (d_in[0] ==1'b1) ? 3'b000:
+   assign d_out = (d_in[0] ==1'b1) ? 3'b000:
                 (d_in[1] ==1'b1) ? 3'b001:
                 (d_in[2] ==1'b1) ? 3'b010:
                 (d_in[3] ==1'b1) ? 3'b011:
