@@ -27,4 +27,7 @@ module decoder_tb ;
 
     end
     
+    initial begin
+        $monitor("TIME:%d , enable:%d , input:%d%d%d , output:%d%d%d%d%d%d%d%d",$time,en,in2,in1,in0,d7,d6,d5,d4,d3,d2,d1,d0);
+    end
 endmodule
