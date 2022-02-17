@@ -58,24 +58,9 @@ end
 
 always @(curr_st or in) begin
     case(curr_st)
-        S0 : if (in == 1'b1)  begin
-                out = 1'b0;
-             end
-             else begin
-                out = 1'b0;
-             end
-        S1 : if (in == 1'b1)  begin
-                 out = 1'b0;
-             end
-             else begin
-                 out = 1'b0;
-             end
-        S2 : if (in == 1'b1)  begin
-                 out = 1'b0;
-             end
-             else begin
-                 out = 1'b0;
-             end
+        S0 : out = 1'b0 ;
+        S1 : out = 1'b0;
+        S2 : out = 1'b0;
         S3 : if (in == 1'b0)  begin
                  out = 1'b1;
              end
