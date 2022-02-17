@@ -1,4 +1,5 @@
 `include "A3Q2_odd_parity_generator.v"
+`timescale 1ns/1ps
 module odd_parity_generator_tb;
     reg rst,clk,print;
     
@@ -20,17 +21,18 @@ module odd_parity_generator_tb;
         $display("TIME:%d rst:%d in:\"%s\" out:\"%s\"",$time,rst,inp,outp);
     end
 
-    always #1 clk = ~clk;
+    always #0.1 clk = ~clk;
 
     always @(inp) begin
         for(integer i=0;i<4;i=i+1) begin
+            @(posedge clk);
             case (i)
                 0: in=inp[32:25];
                 1: in=inp[24:17];
                 2: in=inp[16:9];
                 3: in=inp[8:1];
             endcase
-            #1;
+            @(negedge clk);
             outp={outp[24:1],out[8:1]};
         end
         print=~print;
