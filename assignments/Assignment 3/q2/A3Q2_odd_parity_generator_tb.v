@@ -6,7 +6,7 @@ module odd_parity_generator_tb;
     reg [8:1] in;
     wire [8:1]out;
     
-    reg [32:1] inp,outt,outp;
+    reg [32:1] inp,outp;
 
     odd_parity_generator g(clk,rst,in,out);
 
@@ -17,7 +17,7 @@ module odd_parity_generator_tb;
     end
 
     
-    always @(posedge print or negedge print) begin
+    always @(print) begin
         $display("TIME:%d rst:%d in:\"%s\" out:\"%s\"",$time,rst,inp,outp);
     end
 
@@ -25,14 +25,13 @@ module odd_parity_generator_tb;
 
     always @(inp) begin
         for(integer i=0;i<4;i=i+1) begin
-            @(negedge clk);
             case (i)
                 0: in=inp[32:25];
                 1: in=inp[24:17];
                 2: in=inp[16:9];
                 3: in=inp[8:1];
             endcase
-            @(posedge clk);
+            #1;
             outp={outp[24:1],out[8:1]};
         end
         // outp=outt;
@@ -40,21 +39,21 @@ module odd_parity_generator_tb;
     end
 
     initial begin
-        #1;
+        
         inp="000 ";
-        #5;
+        #5 ;
         inp="001 ";
-        #5;
+        #5 ;
         inp="010 ";
-        #5;
+        #5 ;
         inp="011 ";
-        #5;
+        #5 ;
         inp="100 ";
-        #5;
+        #5 ;
         inp="101 ";
-        #5;
+        #5 ;
         inp="110 ";
-        #5;
+        #5 ;
         inp="111 ";
         #5;
         $finish;

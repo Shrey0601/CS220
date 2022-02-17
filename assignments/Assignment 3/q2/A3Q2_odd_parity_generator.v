@@ -5,10 +5,9 @@ module odd_parity_generator(
     output reg[8:1] out
 );
 
-reg [1:0] curr_st, next_st;
-
 //-------------Internal Variables---------------------------
 
+reg [1:0] curr_st, next_st;
 parameter S0 = 2'b00, S1 = 2'b01, S2 = 2'b10, S3 = 2'b11;
 initial begin
     curr_st=0;
