@@ -25,7 +25,7 @@ end
 
 //----------Seq Logic-----------------------------
 
-always @(clk) begin
+always @(posedge clk) begin
         if (reset) begin
             curr_st <= S0;
         end

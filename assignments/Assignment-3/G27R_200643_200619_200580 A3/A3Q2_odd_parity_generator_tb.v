@@ -1,7 +1,8 @@
 `include "A3Q2_odd_parity_generator.v"
 module odd_parity_generator_tb;
     reg rst,clk,print;
-    
+    // wire [7:0]q;
+    // string
     reg [8:1] in;
     wire [8:1]out;
     
@@ -33,6 +34,7 @@ module odd_parity_generator_tb;
             #1;
             outp={outp[24:1],out[8:1]};
         end
+        // outp=outt;
         print=~print;
     end
 
