@@ -1,7 +1,6 @@
 module gray_code_counter(
     input clk,           //clock
     input reset,         //reset signal
-    input inp,           //input terminal
     output reg out       //output terminal
 );
 
@@ -13,57 +12,17 @@ parameter S0 = 3'b000, S1 = 3'b001, S2 = 3'b011, S3 = 3'b010,
 
 //--------------Combinational logic---------------------
 
-always @(curr_state or inp)
+always @(curr_state)
 begin : gray_combi
     case(curr_state)
-        S0 : if (inp == 1'b1)  begin
-                 next_state = S1;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S1 : if (inp == 1'b1)  begin
-                 next_state = S2;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S2 : if (inp == 1'b1)  begin
-                 next_state = S3;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S3 : if (inp == 1'b1)  begin
-                 next_state = S4;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S4 : if (inp == 1'b1)  begin
-                 next_state = S5;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S5 : if (inp == 1'b1)  begin
-                 next_state = S6;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S6 : if (inp == 1'b1)  begin
-                 next_state = S7;
-             end
-             else begin
-                 next_state = curr_state;
-             end
-        S7 : if (inp == 1'b1)  begin
-                 next_state = S0;
-             end
-             else begin
-                 next_state = curr_state;
-             end
+        S0 :  next_state = S1;
+        S1 :  next_state = S2;
+        S2 :  next_state = S3;
+        S3 :  next_state = S4;
+        S4 :  next_state = S5;
+        S5 :  next_state = S6;
+        S6 :  next_state = S7;
+        S7 :  next_state = S0;
         default : next_state = S0;
     endcase
 end
@@ -82,7 +41,7 @@ end
 
 //--------------Output logic----------------------
 
-always @(curr_state or inp) begin
+always @(curr_state) begin
     case(curr_state)
         S0 : out = 1'b0;
         S1 : out = 1'b0;
@@ -91,12 +50,7 @@ always @(curr_state or inp) begin
         S4 : out = 1'b0;
         S5 : out = 1'b0;
         S6 : out = 1'b0;
-        S7 : if (inp == 1'b0) begin
-            out = 1'b0;
-            end
-            else begin
-                out = 1'b1;
-            end
+        S7 : out = 1'b1;
         default : out = 1'b0;
     endcase
 end

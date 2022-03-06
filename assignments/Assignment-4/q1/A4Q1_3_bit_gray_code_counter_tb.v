@@ -21,77 +21,77 @@ initial begin
 
     //15 different input sequences to test the code
 
-   #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1;
-   reset = 0;
-   #5;
-   reset = 0;
-
-   #2 inp = 1; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 0;
+   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 1;
+   #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0;
+   #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 1;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0;
+   #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 1; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 0;
+   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 1;
+   #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 1;
+   #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 1;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 0; #2 inp = 0;
+   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 1;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1;
+   #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0;
+   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 0;
+   #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 0; #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 0;
+   #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 0; #2 inp = 1; #2 inp = 1;
+   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
 
-   #2 inp = 0; #2 inp = 0; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 1; #2 inp = 0;
+   #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 1;
+   reset = 1;
+   #5;
+   reset = 0;
+
+   #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0;
    reset = 1;
    #5;
    reset = 0;
