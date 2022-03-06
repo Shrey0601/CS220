@@ -11,36 +11,36 @@ wire overflow;
 A4Q2_8_bit_adder_subtractor a1(a, b, opcode, sum, overflow);
 
 initial begin
-        a=15;b=10;opcode=1;
-        #10;
-        a=25;b=20;opcode=0;
-        #10;
-        a=35;b=30;opcode=1;
-        #10;
-        a=45;b=40;opcode=0;
-        #10;    
-        a=55;b=50;opcode=1;
-        #10;
-        a=65;b=60;opcode=0;
-        #10;
-        a=75;b=70;opcode=1;
-        #10;
-        a=85;b=80;opcode=0;
-        #10;
-        a=95;b=90;opcode=1;
-        #10;
-        a=105;b=100;opcode=0;
-        #10;
-        a=15;b=21;opcode=1;
-        #10;
-        a=115;b=110;opcode=0;
-        #10;
-        a=125;b=120;opcode=1;
-        #10;
-        a=135;b=130;opcode=0;
-        #10;
-        a=151;b=210;opcode=1;
-        #10;
+        a=8'b00000011; b=8'b00000001; opcode=1;
+        #5;
+        a=8'b00000111; b=8'b00000011; opcode=0;
+        #5;
+        a=8'b10001011; b=8'b10100001; opcode=1;
+        #5;
+        a=8'b10100001; b=8'b01111101; opcode=0;
+        #5;    
+        a=8'b01001011; b=8'b01001011; opcode=0;
+        #5;
+        a=8'b11001000; b=8'b11011101; opcode=1;
+        #5;
+        a=8'b00101011; b=8'b00100001; opcode=1;
+        #5;
+        a=8'b01111110; b=8'b01111001; opcode=0;
+        #5;
+        a=8'b10101010; b=8'b01010101; opcode=1;
+        #5;
+        a=8'b10001001; b=8'b01111111; opcode=0;
+        #5;
+        a=8'b00011011; b=8'b00001001; opcode=1;
+        #5;
+        a=8'b01111111; b=8'b11111111; opcode=0;
+        #5;
+        a=8'b00111011; b=8'b00010001; opcode=1;
+        #5;
+        a=8'b10000011; b=8'b10000111; opcode=0;
+        #5;
+        a=8'b00001111; b=8'b11110000; opcode=1;
+        #5;
         $finish;
 end
 
@@ -50,7 +50,7 @@ initial begin
 end
 
 initial begin
-    $monitor("TIME: %d, a:%d, b:%d, sum:%d, overflow:%d",$time,a,b,sum,overflow);
+    $monitor("TIME: %d, a:%b, b:%b, opcode:%d, sum:%b, overflow:%d",$time,a,b,opcode,sum,overflow);
 end
 
 endmodule
