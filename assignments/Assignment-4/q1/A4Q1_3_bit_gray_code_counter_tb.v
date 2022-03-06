@@ -2,10 +2,10 @@
 `include "A4Q1_3_bit_gray_code_counter.v"
 
 module A4Q1_3_bit_gray_code_counter_tb;
-reg inp,clk,reset;                       //inputs
+reg clk,reset;                       //inputs
 wire out;                                //output
 
-gray_code_counter g1(inp, clk, reset, out);
+gray_code_counter g1(clk, reset, out);
 
 always #1 clk=~clk;
 
@@ -17,88 +17,11 @@ initial begin
 
     reset = 0;
     clk = 0;
-    inp = 0;
-
-    //15 different input sequences to test the code
-
-   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 1;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 1;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 1;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0; #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 0; #1 inp = 1; #1 inp = 1;
-   reset = 1;
-   #5;
-   reset = 0;
-
-   #1 inp = 0; #1 inp = 0; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 1; #1 inp = 0;
-   reset = 1;
-   #5;
-   reset = 0;
+    
 end
 
 initial begin 
-    #317 $finish;
+    #100 $finish;
 end
 
 endmodule
