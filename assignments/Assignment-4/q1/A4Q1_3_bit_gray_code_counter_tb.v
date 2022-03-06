@@ -13,10 +13,11 @@ initial begin
     $dumpfile("A4Q1_3_bit_gray_code_counter_tb.vcd");
     $dumpvars(0, A4Q1_3_bit_gray_code_counter_tb);
 
-     $monitor($time, , ,"clk=%b",clk,,"out=%b",out,,"reset=%b",reset,,"inp=%b",inp);
+     $monitor($time, , ,"clk=%b",clk,,"out=%b",out,,"reset=%b",reset);
 
     reset = 0;
     clk = 0;
+    
     
 end
 
