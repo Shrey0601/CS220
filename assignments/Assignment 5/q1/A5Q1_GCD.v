@@ -29,10 +29,7 @@ module GCD (
                 end
             end
         end
-        while(count>0)begin
-            X=X<<1;
-            count=count-1;
-        end
+        X=X<<count;
         out=X;
     end
     
